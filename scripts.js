@@ -11,7 +11,8 @@ function book(title, autor, pages, read){
 }
 
 function addBook(title, autor, pages, read){
-    let addedBook = new book(title, autor, pages, read)
+    let addedBook = new book(title, autor, pages, read);
+    library.push(addedBook)
     console.log(addedBook)
 
 } 
