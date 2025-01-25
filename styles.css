@@ -14,3 +14,11 @@ body{
         display: grid;
         grid-template-columns: 1fr 4fr ;
     }
+    .options{
+        grid-column: 1/4;
+        grid-row: 3/11;
+    }
+    .display{
+        grid-column: 4/16;
+        grid-row: 3/11;
+    }
