@@ -16,3 +16,7 @@ function addBook(title, autor, pages, read){
     console.log(addedBook)
 
 } 
+
+function displayBooks(){
+    console.log(library.map)
+}

@@ -1,0 +1,16 @@
+body{
+    margin: 10px;
+}
+
+.mainContainer{
+    display: grid;
+    grid-template-columns: repeat(15, 75px);
+    grid-template-rows: repeat(10, 75px);
+}
+    .header{
+        grid-row: 1/3;
+        grid-column: 1/16;
+
+        display: grid;
+        grid-template-columns: 1fr 4fr ;
+    }
