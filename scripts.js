@@ -5,9 +5,6 @@ function book(title, autor, pages, read){
     this.autor = autor;
     this.pages = pages;
     this.read = read;
-    this.bookInfo = function(){
-    return "Book: "+ this.title + ", written by " + this.autor + " has " + this.pages + " pages. Read = "+this.read;
-    }
 }
 
 function addBook(title, autor, pages, read){
@@ -17,6 +14,15 @@ function addBook(title, autor, pages, read){
 
 } 
 
-function displayBooks(){
-    console.log(library.map)
-}
+document.querySelector("#submit").addEventListener("click", (e) => {
+    e.preventDefault();
+
+    let title = document.getElementById("title").value;
+    let autor = document.getElementById("autor").value;
+    let pages = document.getElementById("pages").value;
+    let read = document.getElementById("read").value;
+
+    addBook(title, autor, pages, read);
+})
+
+
