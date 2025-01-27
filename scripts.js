@@ -18,20 +18,31 @@ document.querySelector("#submit").addEventListener("click", (e) => {
     let title = document.getElementById("title").value;
     let autor = document.getElementById("autor").value;
     let pages = document.getElementById("pages").value;
-    let read = document.getElementById("read").value;
+    let read = document.getElementById("read").checked;
+    if(read === false){read = "No"}
+    else {read = "Yes!"}
 
     addBook(title, autor, pages, read);
 
-    document.getElementById("form").reset;
+    document.getElementById("form").reset();
+    renderBooks();
 })
 
 
-const bookContainer = document.querySelector(".display")
+const bookContainer = document.querySelector(".display");
 
-//function displayBooks(){
-//    library.forEach(addedBook) => {
-//
-//    }
-//}
+function renderBooks(){
+    bookContainer.innerHTML = "";
+
+    library.forEach(addedBook => {
+    
+        let bookCard = document.createElement("div");
+        bookCard.classList.add("cards");
+
+        bookCard.innerHTML = `<h4>${addedBook.title}</h4> <p>By ${addedBook.autor}</p> <p>${addedBook.pages} pages</p> <p>read?: ${addedBook.read}`;
+
+        bookContainer.appendChild(bookCard);
+})}
+
 
 
