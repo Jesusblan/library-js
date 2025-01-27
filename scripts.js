@@ -39,7 +39,7 @@ function renderBooks(){
         let bookCard = document.createElement("div");
         bookCard.classList.add("cards");
 
-        bookCard.innerHTML = `<h4>${addedBook.title}</h4> <p>By ${addedBook.autor}</p> <p>${addedBook.pages} pages</p> <p>read?: ${addedBook.read}`;
+        bookCard.innerHTML = `<h4>${addedBook.title}</h4> <p>By ${addedBook.autor}</p> <p>${addedBook.pages} pages</p> <p>Read: ${addedBook.read}`;
 
         bookContainer.appendChild(bookCard);
 })}
