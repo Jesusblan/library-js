@@ -36,4 +36,18 @@ body{
     .display{
         grid-column: 4/16;
         grid-row: 3/11;
+
+        display: grid;
+        grid-template-columns: repeat(4, 200px);
+        grid-template-rows: repeat(3, 200px);
     }
+        .cards{
+            margin: 3px;
+            padding: 2px;
+            background-image: linear-gradient(to bottom right, white, rgb(156, 244, 156));
+            border-radius: 20px;
+            border-style: solid;
+            border-color: rgb(12, 160, 49);
+            font-style: italic;
+            font-size: 17px;
+        }

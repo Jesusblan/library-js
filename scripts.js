@@ -9,9 +9,7 @@ function book(title, autor, pages, read){
 
 function addBook(title, autor, pages, read){
     let addedBook = new book(title, autor, pages, read);
-    library.push(addedBook)
-    console.log(addedBook)
-
+    library.push(addedBook);
 } 
 
 document.querySelector("#submit").addEventListener("click", (e) => {
@@ -23,6 +21,17 @@ document.querySelector("#submit").addEventListener("click", (e) => {
     let read = document.getElementById("read").value;
 
     addBook(title, autor, pages, read);
+
+    document.getElementById("form").reset;
 })
+
+
+const bookContainer = document.querySelector(".display")
+
+//function displayBooks(){
+//    library.forEach(addedBook) => {
+//
+//    }
+//}
 
 
